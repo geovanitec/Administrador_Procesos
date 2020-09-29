@@ -14,11 +14,11 @@ using System.Diagnostics;
 
 namespace Simulacion_Procesos
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class Diseño : MetroFramework.Forms.MetroForm
     {
         //Declaracion de variable string para obtener el nombre del proceso en la tabla para su eliminacion
         string Str_Obt_Proc;
-        public Form1()
+        public Diseño()
         {
             InitializeComponent();
             //Activacion del timer que actualizara la tabla
@@ -85,7 +85,7 @@ namespace Simulacion_Procesos
    
 
         //Boton Detener Proceso
-       private void Btn_Detener_Click(object sender, EventArgs e){
+     /*  private void Btn_Detener_Click(object sender, EventArgs e){
             //Ocultamos todos los objetos para los graficos y mostramos solo el Dgv de Procesos
             LblNombreCPU.Visible = false;
             LblNombreRam.Visible = false;
@@ -114,7 +114,7 @@ namespace Simulacion_Procesos
             {
                 MessageBox.Show("No se ha seleccionado ningun proceso para detener." + x, "Error al Detener Proceso", MessageBoxButtons.OK);
             }
-        }
+        }*/
         
 
         private void dgv_Proceso_MouseClick_1(object sender, MouseEventArgs e)
@@ -220,6 +220,39 @@ namespace Simulacion_Procesos
 
             //Llamado al proceso para actualizar la tabla
             ActualizarTabla();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            LblNombreCPU.Visible = false;
+            LblNombreRam.Visible = false;
+            ProgressBarCPU.Visible = false;
+            ProgressBarRAM.Visible = false;
+            LblPorCPU.Visible = false;
+            LblPorRAM.Visible = false;
+            Grafico.Visible = false;
+            dgv_Proceso.Visible = true;
+
+            try
+            {
+                //Por cada proceso que haya se comparara su nombre con el nombre del proceso que se desea eliminar.
+                foreach (Process proceso in Process.GetProcesses())
+                {
+                    if (proceso.ProcessName == Str_Obt_Proc)
+                    {
+                        proceso.Kill();//Se elimina el proceso
+                        ActualizarTabla();//Se llama al proceso para actualizar la tabla automaticamente
+                    }
+                }
+
+            }
+            //En caso no se seleccione un proceso mostrara el siguiente mensaje.
+            catch (Exception x)
+            {
+                MessageBox.Show("No se ha seleccionado ningun proceso para detener." + x, "Error al Detener Proceso", MessageBoxButtons.OK);
+            }
+
+
         }
     }
 }
