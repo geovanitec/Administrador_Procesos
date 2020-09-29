@@ -69,12 +69,12 @@ namespace Simulacion_Procesos
         //Boton Actualizar
        private void BtnActualizar_Click(object sender, EventArgs e){
             //Ocultamos todos los objetos para los graficos y mostramos solo el Dgv de Procesos
-            LblNombreCPU.Visible = false;
+            /*LblNombreCPU.Visible = false;
             LblNombreRam.Visible = false;
             ProgressBarCPU.Visible = false;
             ProgressBarRAM.Visible = false;
             LblPorCPU.Visible = false;
-            LblPorRAM.Visible = false;
+            LblPorRAM.Visible = false;*/
             Grafico.Visible = false;
             dgv_Proceso.Visible = true;
 
@@ -134,11 +134,11 @@ namespace Simulacion_Procesos
             float fCPU = pCPU.NextValue();
             float fRAM = pRAM.NextValue();
             //Agregamos los Valores a la Barra de progeso respectivamente
-            ProgressBarCPU.Value = (int)fCPU;
-            ProgressBarRAM.Value = (int)fRAM;
+            /*ProgressBarCPU.Value = (int)fCPU;
+            ProgressBarRAM.Value = (int)fRAM;*/
             //Damos el formato de porcentaje correspondiente al label de porcentaje con lo float
-            LblPorCPU.Text = string.Format("{0:0.00}%", fCPU);
-            LblPorRAM.Text = string.Format("{0:0.00}%", fRAM);
+            /*LblPorCPU.Text = string.Format("{0:0.00}%", fCPU);
+            LblPorRAM.Text = string.Format("{0:0.00}%", fRAM);*/
             //Agregamos los valores de Y que se usaran para mostrarlos en grafica
            //Grafico.Series["CPU"].Points.AddY(fCPU);
            //Grafico.Series["RAM"].Points.AddY(fRAM);
@@ -146,12 +146,12 @@ namespace Simulacion_Procesos
 
         private void Button1_Click(object sender, EventArgs e){
             //Ocultamos el Dgv de Procesos y mostramos todos los objetos para los gráficos
-            LblNombreCPU.Visible = true;
+           /* LblNombreCPU.Visible = true;
             LblNombreRam.Visible = true;
             ProgressBarCPU.Visible = true;
             ProgressBarRAM.Visible = true;
             LblPorCPU.Visible = true;
-            LblPorRAM.Visible = true;
+            LblPorRAM.Visible = true;*/
             Grafico.Visible = true;
             dgv_Proceso.Visible = false;
         }
@@ -209,12 +209,12 @@ namespace Simulacion_Procesos
         private void button1_Click_1(object sender, EventArgs e)
         {
             //Ocultamos todos los objetos para los graficos y mostramos solo el Dgv de Procesos
-            LblNombreCPU.Visible = false;
+            /*LblNombreCPU.Visible = false;
             LblNombreRam.Visible = false;
             ProgressBarCPU.Visible = false;
             ProgressBarRAM.Visible = false;
             LblPorCPU.Visible = false;
-            LblPorRAM.Visible = false;
+            LblPorRAM.Visible = false;*/
             Grafico.Visible = false;
             dgv_Proceso.Visible = true;
 
@@ -224,12 +224,12 @@ namespace Simulacion_Procesos
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            LblNombreCPU.Visible = false;
+            /*LblNombreCPU.Visible = false;
             LblNombreRam.Visible = false;
             ProgressBarCPU.Visible = false;
             ProgressBarRAM.Visible = false;
             LblPorCPU.Visible = false;
-            LblPorRAM.Visible = false;
+            LblPorRAM.Visible = false;*/
             Grafico.Visible = false;
             dgv_Proceso.Visible = true;
 

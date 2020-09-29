@@ -40,3 +40,17 @@ C:\Users\Geovani\Documents\CURSOS_2020_SEMESTRE2\SISTEMAS OPERATIVOS 1\Programa_
 C:\Users\Geovani\Documents\CURSOS_2020_SEMESTRE2\SISTEMAS OPERATIVOS 1\Programa_Administrador_Procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Tareas.csproj.CopyComplete
 C:\Users\Geovani\Documents\CURSOS_2020_SEMESTRE2\SISTEMAS OPERATIVOS 1\Programa_Administrador_Procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Procesos.exe
 C:\Users\Geovani\Documents\CURSOS_2020_SEMESTRE2\SISTEMAS OPERATIVOS 1\Programa_Administrador_Procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Procesos.pdb
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\bin\Debug\Administrador_De_Procesos.exe.config
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\bin\Debug\Administrador_De_Procesos.exe
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\bin\Debug\Administrador_De_Procesos.pdb
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\bin\Debug\MetroFramework.Design.dll
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\bin\Debug\MetroFramework.dll
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Tareas.csprojAssemblyReference.cache
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Simulacion_Procesos.Diseño.resources
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Admnistrador_De_Procesos.Properties.Resources.resources
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Tareas.csproj.GenerateResource.cache
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Tareas.csproj.CoreCompileInputs.cache
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Tareas.csproj.CopyComplete
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Procesos.exe
+C:\Users\Angel\Desktop\SIstemas Operativos\procesos\Programa_C#\Administrador_De_Tareas\obj\Debug\Administrador_De_Procesos.pdb

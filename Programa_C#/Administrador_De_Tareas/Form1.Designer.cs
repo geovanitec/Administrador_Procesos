@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Boton_Deneter_Proceso = new System.Windows.Forms.Button();
             this.lbl_Contador = new System.Windows.Forms.Label();
             this.btnActualizarprocesosenejecucion = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -44,14 +45,8 @@
             this.pRAM = new System.Diagnostics.PerformanceCounter();
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.LblNombreCPU = new MetroFramework.Controls.MetroLabel();
-            this.ProgressBarCPU = new MetroFramework.Controls.MetroProgressBar();
-            this.ProgressBarRAM = new MetroFramework.Controls.MetroProgressBar();
-            this.LblNombreRam = new MetroFramework.Controls.MetroLabel();
-            this.LblPorCPU = new MetroFramework.Controls.MetroLabel();
-            this.LblPorRAM = new MetroFramework.Controls.MetroLabel();
             this.Grafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Boton_Deneter_Proceso = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proceso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
@@ -61,24 +56,39 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.Boton_Deneter_Proceso);
             this.panel2.Controls.Add(this.lbl_Contador);
             this.panel2.Controls.Add(this.btnActualizarprocesosenejecucion);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(20, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 435);
+            this.panel2.Size = new System.Drawing.Size(1034, 435);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // Boton_Deneter_Proceso
+            // 
+            this.Boton_Deneter_Proceso.BackColor = System.Drawing.Color.White;
+            this.Boton_Deneter_Proceso.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Boton_Deneter_Proceso.ForeColor = System.Drawing.Color.Black;
+            this.Boton_Deneter_Proceso.Location = new System.Drawing.Point(3, 190);
+            this.Boton_Deneter_Proceso.Name = "Boton_Deneter_Proceso";
+            this.Boton_Deneter_Proceso.Size = new System.Drawing.Size(219, 71);
+            this.Boton_Deneter_Proceso.TabIndex = 26;
+            this.Boton_Deneter_Proceso.Text = "Detener Proceso";
+            this.Boton_Deneter_Proceso.UseVisualStyleBackColor = false;
+            this.Boton_Deneter_Proceso.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // lbl_Contador
             // 
             this.lbl_Contador.AutoSize = true;
-            this.lbl_Contador.Location = new System.Drawing.Point(23, 395);
+            this.lbl_Contador.BackColor = System.Drawing.Color.Black;
+            this.lbl_Contador.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Contador.Location = new System.Drawing.Point(3, 345);
             this.lbl_Contador.Name = "lbl_Contador";
-            this.lbl_Contador.Size = new System.Drawing.Size(95, 13);
+            this.lbl_Contador.Size = new System.Drawing.Size(162, 19);
             this.lbl_Contador.TabIndex = 1;
             this.lbl_Contador.Text = "Precesos Actuales";
             // 
@@ -88,7 +98,7 @@
             this.btnActualizarprocesosenejecucion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnActualizarprocesosenejecucion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarprocesosenejecucion.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizarprocesosenejecucion.Location = new System.Drawing.Point(3, 25);
+            this.btnActualizarprocesosenejecucion.Location = new System.Drawing.Point(3, 96);
             this.btnActualizarprocesosenejecucion.Name = "btnActualizarprocesosenejecucion";
             this.btnActualizarprocesosenejecucion.Size = new System.Drawing.Size(216, 69);
             this.btnActualizarprocesosenejecucion.TabIndex = 0;
@@ -104,7 +114,7 @@
             // 
             this.dgv_Proceso.AllowUserToAddRows = false;
             this.dgv_Proceso.AllowUserToDeleteRows = false;
-            this.dgv_Proceso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgv_Proceso.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Proceso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Proceso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -113,13 +123,13 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgv_Proceso.Location = new System.Drawing.Point(271, 61);
+            this.dgv_Proceso.Location = new System.Drawing.Point(258, 82);
             this.dgv_Proceso.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Proceso.Name = "dgv_Proceso";
             this.dgv_Proceso.ReadOnly = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dgv_Proceso.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.dgv_Proceso.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Proceso.RowTemplate.Height = 24;
             this.dgv_Proceso.Size = new System.Drawing.Size(708, 342);
             this.dgv_Proceso.TabIndex = 19;
@@ -178,74 +188,6 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // LblNombreCPU
-            // 
-            this.LblNombreCPU.AutoSize = true;
-            this.LblNombreCPU.Location = new System.Drawing.Point(321, 165);
-            this.LblNombreCPU.Name = "LblNombreCPU";
-            this.LblNombreCPU.Size = new System.Drawing.Size(35, 19);
-            this.LblNombreCPU.TabIndex = 20;
-            this.LblNombreCPU.Text = "CPU";
-            this.LblNombreCPU.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.LblNombreCPU.Visible = false;
-            this.LblNombreCPU.Click += new System.EventHandler(this.LblNombreCPU_Click);
-            // 
-            // ProgressBarCPU
-            // 
-            this.ProgressBarCPU.Location = new System.Drawing.Point(395, 165);
-            this.ProgressBarCPU.Name = "ProgressBarCPU";
-            this.ProgressBarCPU.Size = new System.Drawing.Size(416, 23);
-            this.ProgressBarCPU.TabIndex = 21;
-            this.ProgressBarCPU.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.ProgressBarCPU.Visible = false;
-            this.ProgressBarCPU.Click += new System.EventHandler(this.ProgressBarCPU_Click);
-            // 
-            // ProgressBarRAM
-            // 
-            this.ProgressBarRAM.Location = new System.Drawing.Point(395, 219);
-            this.ProgressBarRAM.Name = "ProgressBarRAM";
-            this.ProgressBarRAM.Size = new System.Drawing.Size(416, 23);
-            this.ProgressBarRAM.TabIndex = 23;
-            this.ProgressBarRAM.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.ProgressBarRAM.Visible = false;
-            this.ProgressBarRAM.Click += new System.EventHandler(this.ProgressBarRAM_Click);
-            // 
-            // LblNombreRam
-            // 
-            this.LblNombreRam.AutoSize = true;
-            this.LblNombreRam.Location = new System.Drawing.Point(321, 219);
-            this.LblNombreRam.Name = "LblNombreRam";
-            this.LblNombreRam.Size = new System.Drawing.Size(38, 19);
-            this.LblNombreRam.TabIndex = 22;
-            this.LblNombreRam.Text = "RAM";
-            this.LblNombreRam.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.LblNombreRam.Visible = false;
-            this.LblNombreRam.Click += new System.EventHandler(this.LblNombreRam_Click);
-            // 
-            // LblPorCPU
-            // 
-            this.LblPorCPU.AutoSize = true;
-            this.LblPorCPU.Location = new System.Drawing.Point(837, 169);
-            this.LblPorCPU.Name = "LblPorCPU";
-            this.LblPorCPU.Size = new System.Drawing.Size(31, 19);
-            this.LblPorCPU.TabIndex = 24;
-            this.LblPorCPU.Text = "0 %";
-            this.LblPorCPU.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.LblPorCPU.Visible = false;
-            this.LblPorCPU.Click += new System.EventHandler(this.LblPorCPU_Click);
-            // 
-            // LblPorRAM
-            // 
-            this.LblPorRAM.AutoSize = true;
-            this.LblPorRAM.Location = new System.Drawing.Point(837, 219);
-            this.LblPorRAM.Name = "LblPorRAM";
-            this.LblPorRAM.Size = new System.Drawing.Size(31, 19);
-            this.LblPorRAM.TabIndex = 25;
-            this.LblPorRAM.Text = "0 %";
-            this.LblPorRAM.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.LblPorRAM.Visible = false;
-            this.LblPorRAM.Click += new System.EventHandler(this.LblPorRAM_Click);
-            // 
             // Grafico
             // 
             this.Grafico.Location = new System.Drawing.Point(0, 0);
@@ -253,18 +195,15 @@
             this.Grafico.Size = new System.Drawing.Size(300, 300);
             this.Grafico.TabIndex = 0;
             // 
-            // Boton_Deneter_Proceso
+            // label1
             // 
-            this.Boton_Deneter_Proceso.BackColor = System.Drawing.Color.White;
-            this.Boton_Deneter_Proceso.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Boton_Deneter_Proceso.ForeColor = System.Drawing.Color.Black;
-            this.Boton_Deneter_Proceso.Location = new System.Drawing.Point(0, 139);
-            this.Boton_Deneter_Proceso.Name = "Boton_Deneter_Proceso";
-            this.Boton_Deneter_Proceso.Size = new System.Drawing.Size(219, 71);
-            this.Boton_Deneter_Proceso.TabIndex = 26;
-            this.Boton_Deneter_Proceso.Text = "Detener Proceso";
-            this.Boton_Deneter_Proceso.UseVisualStyleBackColor = false;
-            this.Boton_Deneter_Proceso.Click += new System.EventHandler(this.button1_Click_2);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(280, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(360, 32);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Administrador De Tareas";
             // 
             // Diseño
             // 
@@ -272,12 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 515);
-            this.Controls.Add(this.LblPorRAM);
-            this.Controls.Add(this.LblPorCPU);
-            this.Controls.Add(this.ProgressBarRAM);
-            this.Controls.Add(this.LblNombreRam);
-            this.Controls.Add(this.ProgressBarCPU);
-            this.Controls.Add(this.LblNombreCPU);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_Proceso);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.Color.White;
@@ -285,7 +219,6 @@
             this.Name = "Diseño";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Black;
-            this.Text = "                              Administrador de Procesos";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
@@ -306,12 +239,6 @@
         private System.Diagnostics.PerformanceCounter pRAM;
         private System.Diagnostics.PerformanceCounter pCPU;
         private System.Windows.Forms.Timer timer;
-        private MetroFramework.Controls.MetroLabel LblNombreCPU;
-        private MetroFramework.Controls.MetroProgressBar ProgressBarCPU;
-        private MetroFramework.Controls.MetroProgressBar ProgressBarRAM;
-        private MetroFramework.Controls.MetroLabel LblNombreRam;
-        private MetroFramework.Controls.MetroLabel LblPorCPU;
-        private MetroFramework.Controls.MetroLabel LblPorRAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
@@ -322,6 +249,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart Grafico;
         private System.Windows.Forms.Label lbl_Contador;
         private System.Windows.Forms.Button Boton_Deneter_Proceso;
+        private System.Windows.Forms.Label label1;
     }
 }
 
