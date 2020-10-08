@@ -22,12 +22,12 @@ namespace Simulacion_Procesos
         {
             InitializeComponent();
             //Activacion del timer que actualizara la tabla
-            ActualizarTabla();
+            ActualizarTabla_Procesos();
             timer1.Enabled = true;
             
         }
 
-        private void ActualizarTabla()
+        private void ActualizarTabla_Procesos()
         {
             //limpieza del datagrid
             dgv_Proceso.Rows.Clear();
@@ -67,7 +67,7 @@ namespace Simulacion_Procesos
 
 
         //Boton Actualizar
-       private void BtnActualizar_Click(object sender, EventArgs e){
+       private void BtnActualizarProcesos_Click(object sender, EventArgs e){
             //Ocultamos todos los objetos para los graficos y mostramos solo el Dgv de Procesos
             /*LblNombreCPU.Visible = false;
             LblNombreRam.Visible = false;
@@ -79,7 +79,7 @@ namespace Simulacion_Procesos
             dgv_Proceso.Visible = true;
 
             //Llamado al proceso para actualizar la tabla
-            ActualizarTabla(); 
+            ActualizarTabla_Procesos(); 
         }
         
    
@@ -219,7 +219,7 @@ namespace Simulacion_Procesos
             dgv_Proceso.Visible = true;
 
             //Llamado al proceso para actualizar la tabla
-            ActualizarTabla();
+            ActualizarTabla_Procesos();
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -241,7 +241,7 @@ namespace Simulacion_Procesos
                     if (proceso.ProcessName == Str_Obt_Proc)
                     {
                         proceso.Kill();//Se elimina el proceso
-                        ActualizarTabla();//Se llama al proceso para actualizar la tabla automaticamente
+                        ActualizarTabla_Procesos();//Se llama al proceso para actualizar la tabla automaticamente
                     }
                 }
 

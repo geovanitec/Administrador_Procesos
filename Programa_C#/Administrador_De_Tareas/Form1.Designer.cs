@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Boton_Deneter_Proceso = new System.Windows.Forms.Button();
             this.lbl_Contador = new System.Windows.Forms.Label();
@@ -60,11 +60,11 @@
             this.panel2.Controls.Add(this.Boton_Deneter_Proceso);
             this.panel2.Controls.Add(this.lbl_Contador);
             this.panel2.Controls.Add(this.btnActualizarprocesosenejecucion);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(20, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1034, 435);
+            this.panel2.Size = new System.Drawing.Size(222, 435);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -114,7 +114,7 @@
             // 
             this.dgv_Proceso.AllowUserToAddRows = false;
             this.dgv_Proceso.AllowUserToDeleteRows = false;
-            this.dgv_Proceso.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Proceso.BackgroundColor = System.Drawing.Color.Black;
             this.dgv_Proceso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Proceso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -127,9 +127,9 @@
             this.dgv_Proceso.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Proceso.Name = "dgv_Proceso";
             this.dgv_Proceso.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            this.dgv_Proceso.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dgv_Proceso.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Proceso.RowTemplate.Height = 24;
             this.dgv_Proceso.Size = new System.Drawing.Size(708, 342);
             this.dgv_Proceso.TabIndex = 19;
